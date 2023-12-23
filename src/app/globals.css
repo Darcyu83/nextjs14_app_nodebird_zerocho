@@ -1,9 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -104,4 +104,58 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.blue_btn {
+  border-radius: 20px;
+  padding: 0 16px;
+  font-size: 16px;
+  background-color: rgb(29, 155, 240);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+}
+
+.blue_btn:hover {
+  background-color: rgb(29, 140, 216);
+}
+
+.blue_btn:disabled {
+  color: gray;
+  background: lightgray;
+}
+
+.white_btn {
+  border-radius: 20px;
+  padding: 0 16px;
+  font-size: 16px;
+  background-color: white;
+  color: rgb(29, 155, 240);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+}
+
+.white_btn:hover {
+  background-color: rgb(220, 238, 251);
+}
+
+.white_btn:disabled {
+  color: gray;
+  background: lightgray;
+}
+
+.layout_nm {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: blue;
+  background: white;
+  font-size: 12px;
 }

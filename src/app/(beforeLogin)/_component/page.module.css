@@ -1,0 +1,72 @@
+.modal_bg_layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container > h1 {
+  align-self: flex-start;
+  margin-bottom: 16px;
+}
+
+.modal_contents {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.input_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 2px 0;
+}
+
+.input_label {
+  font-size: 14px;
+  color: black;
+}
+
+.input {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 2px;
+  height: 16px;
+  color: black;
+}
+
+.modal_footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  width: fit-content;
+  height: 24px;
+}
+
+.msg {
+  font-size: 14px;
+  color: dodgerblue;
+}

@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 
+import styles from "./page.module.css"
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -11,15 +13,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode
+  modal: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div>RootLayout</div>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
