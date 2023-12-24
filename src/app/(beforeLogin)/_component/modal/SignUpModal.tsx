@@ -49,7 +49,7 @@ function SignUpModal({ children }: IProps) {
             닫기
           </button>
         </div>
-        <div className={styles.modal_contents}>
+        <form className={styles.modal_contents}>
           <div className={styles.input_container}>
             <label className={styles.input_label} htmlFor="userId">
               아이디
@@ -67,14 +67,38 @@ function SignUpModal({ children }: IProps) {
             </label>
             <input
               className={styles.input}
-              id="password"
+              id="pwd"
+              //   onChange={onChangePassword}
+              //   value={[password]}
+            />
+          </div>
+          <div className={styles.input_container}>
+            <label className={styles.input_label} htmlFor="password">
+              닉네임
+            </label>
+            <input
+              className={styles.input}
+              id="nickNm"
+              //   onChange={onChangePassword}
+              //   value={[password]}
+            />
+          </div>
+          <div className={styles.input_container}>
+            <label className={styles.input_label} htmlFor="password">
+              프로필
+            </label>
+            <input
+              type="file"
+              className={styles.input}
+              id="nickNm"
               //   onChange={onChangePassword}
               //   value={[password]}
             />
           </div>
 
           {/* <div className={styles.msg}>{message}</div> */}
-        </div>
+        </form>
+
         <div className={styles.modal_footer}>
           <button
             // disabled={!id || !password}

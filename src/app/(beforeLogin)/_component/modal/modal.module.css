@@ -18,7 +18,7 @@
   color: black;
 
   width: 400px;
-  height: 200px;
+  height: fit-content;
 
   display: flex;
   flex-direction: column;
@@ -36,6 +36,7 @@
 .modal_header > h1 {
   align-self: flex-start;
   margin-bottom: 16px;
+  font-size: 20px;
 }
 
 .modal_header > button {
@@ -46,6 +47,13 @@
   outline: none;
   border: none;
   cursor: pointer;
+  padding: 5px;
+}
+
+.modal_header > button:hover {
+  background: lightgray;
+  border-radius: 8px;
+  color: white;
 }
 
 .modal_contents {
@@ -61,6 +69,22 @@
   justify-content: space-between;
   gap: 8px;
   margin: 2px 0;
+}
+
+.input_container > input[type="file"]::file-selector-button {
+  background: none;
+  color: black;
+  outline: none;
+  border-width: 0px 1px 0 0;
+  border-style: solid;
+
+  border-color: lightgray;
+  height: 100%;
+}
+
+.input_container > input[type="file"]::file-selector-button:hover {
+  background: lightblue;
+  color: white;
 }
 
 .input_label {
