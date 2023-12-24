@@ -1,38 +1,51 @@
 "use client"
-import React, { ReactNode, useState } from "react"
+import { RedirectType, redirect } from "next/navigation"
+import React, { ChangeEventHandler, ReactNode, useState } from "react"
 import styles from "./page.module.css"
-import { RedirectType, redirect, useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 
 interface IProps {
   children?: ReactNode
 }
 
-function LoginModal({ children }: IProps) {
-  const router = useRouter()
+function SignUpModal({ children }: IProps) {
   const [userId, setUserId] = useState("")
   const [pwd, setPwd] = useState("")
-  const [message, setMessage] = useState("")
+  const [nickNm, setNickNm] = useState("")
+  const [img, setImg] = useState("")
+  const [imgFile, setImgFile] = useState<File>()
+
+  const router = useRouter()
 
   const onSubmit = () => {}
 
   const onClickClose = () => {
     router.back()
-  }
-  const onChangeId = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("onChangeId eee ", e.target.value)
-    setUserId(e.target.value)
-  }
-  const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("onChangePassword eee ", e.target.value)
-    setPwd(e.target.value)
+
+    // TODO: 뒤로가기 랜딩 페이지가 /home이 아니면 /home로 보내기
   }
 
+  const onChangeUserId: ChangeEventHandler<HTMLInputElement> = (e) => {
+    setUserId(e.target.value)
+  }
+  const onChangePwd: ChangeEventHandler<HTMLInputElement> = (e) => {
+    setPwd(e.target.value)
+  }
+  const onChangeNickNm: ChangeEventHandler<HTMLInputElement> = (e) => {
+    setNickNm(e.target.value)
+  }
+  const onChangeImg: ChangeEventHandler<HTMLInputElement> = (e) => {
+    setImg(e.target.value)
+  }
+  const onChangeImgFile: ChangeEventHandler<HTMLInputElement> = (e) => {
+    e.target.files && setImgFile(e.target.files[0])
+  }
   return (
     <div className={styles.modal_bg_layer}>
       {children}
       <div className={styles.container}>
         <div className={[styles.modal_header].join(" ")}>
-          <h1>로그인</h1>
+          <h1>회원가입</h1>
           <button type="button" onClick={onClickClose}>
             닫기
           </button>
@@ -45,8 +58,8 @@ function LoginModal({ children }: IProps) {
             <input
               className={styles.input}
               id="userId"
-              onChange={onChangeId}
-              value={userId}
+              //   onChange={onChangeId}
+              //   value={id}
             />
           </div>
           <div className={styles.input_container}>
@@ -56,19 +69,19 @@ function LoginModal({ children }: IProps) {
             <input
               className={styles.input}
               id="password"
-              onChange={onChangePassword}
-              value={pwd}
+              //   onChange={onChangePassword}
+              //   value={[password]}
             />
           </div>
 
-          <div className={styles.msg}>{message}</div>
+          {/* <div className={styles.msg}>{message}</div> */}
         </div>
         <div className={styles.modal_footer}>
           <button
-            disabled={!userId || !userId}
+            // disabled={!id || !password}
             className={[styles.btn, "blue_btn"].join(" ")}
           >
-            로그인하기
+            가입하기
           </button>
         </div>
       </div>
@@ -76,4 +89,4 @@ function LoginModal({ children }: IProps) {
   )
 }
 
-export default LoginModal
+export default SignUpModal

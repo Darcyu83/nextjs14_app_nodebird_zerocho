@@ -1,14 +1,14 @@
 import React, { useState } from "react"
 import styles from "./page.module.css"
-import LoginModal from "../../../../_component/LoginModal"
+import SignUpModal from "../../../../_component/SignUpModal"
 
 interface IProps {}
 
 function LoginModal_(props: IProps) {
   return (
-    <LoginModal>
-      <p>인터셉터 라우터 : (.)i/flow/login</p>
-    </LoginModal>
+    <SignUpModal>
+      <p>인터셉터 라우터 : (.)i/flow/signup</p>
+    </SignUpModal>
   )
 }
 
