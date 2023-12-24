@@ -1,7 +1,6 @@
 "use client"
-import { RedirectType, redirect } from "next/navigation"
 import React, { ChangeEventHandler, ReactNode, useState } from "react"
-import styles from "./page.module.css"
+import styles from "./modal.module.css"
 import { useRouter } from "next/navigation"
 
 interface IProps {

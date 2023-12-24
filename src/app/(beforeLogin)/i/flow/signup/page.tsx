@@ -1,4 +1,4 @@
-import SignUpModal from "../../../_component/SignUpModal"
+import SignUpModal from "../../../_component/modal/SignUpModal"
 
 /**
  * <Link/>를 통해서 /i/flow/login 경로로 접근하면

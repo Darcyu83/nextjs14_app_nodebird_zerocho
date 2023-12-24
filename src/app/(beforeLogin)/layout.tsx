@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import styles from "@/app/page.module.css"
+import styles from "./_component/main.module.css"
 interface IProps {
   children: ReactNode
   modal: ReactNode

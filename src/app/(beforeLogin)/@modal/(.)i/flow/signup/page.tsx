@@ -1,15 +1,14 @@
 import React, { useState } from "react"
-import styles from "./page.module.css"
-import SignUpModal from "../../../../_component/SignUpModal"
+import SignUpModal from "../../../../_component/modal/SignUpModal"
 
 interface IProps {}
 
-function LoginModal_(props: IProps) {
+function SignUpModal_(props: IProps) {
   return (
     <SignUpModal>
-      <p>인터셉터 라우터 : (.)i/flow/signup</p>
+      <p>인터셉터 라우터 : @modal (.)i/flow/signup</p>
     </SignUpModal>
   )
 }
 
-export default LoginModal_
+export default SignUpModal_
