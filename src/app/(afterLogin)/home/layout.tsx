@@ -6,8 +6,8 @@ interface IProps {
 
 function HomeLayout({ children }: IProps) {
   return (
-    <div style={{}}>
-      <div>HomeLayout</div>
+    <div>
+      <h1 className="layout_nm">HomeLayout</h1>
       {children}
     </div>
   )

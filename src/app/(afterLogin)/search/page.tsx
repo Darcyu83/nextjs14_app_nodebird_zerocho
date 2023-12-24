@@ -1,3 +1,3 @@
-export default function Home() {
-  return <main></main>
+export default function Search() {
+  return <main>Search</main>
 }
