@@ -9,18 +9,18 @@
   --leftSection-w: 275px;
   width: var(--leftSection-w);
   height: 150dvh;
-  border: 1px solid red;
   position: relative;
 }
 
 .leftSection {
   width: 100%;
   height: 100dvh;
-  color: yellow;
+  color: black;
   background: rgba(255, 255, 255, 0.316);
 }
 
 .leftSectionFixed {
+  background: white;
   position: fixed;
   width: var(--leftSection-w);
   height: 50dvh;
@@ -42,14 +42,12 @@
 }
 
 .main {
-  background: aqua;
   width: 600px;
 
   height: 100dvh;
 }
 
 .rightSection {
-  background: tomato;
   width: 350px;
 }
 

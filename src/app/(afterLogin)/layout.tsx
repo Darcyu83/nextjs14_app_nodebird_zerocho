@@ -4,7 +4,9 @@ import Link from "next/link"
 import Image from "next/image"
 
 import zLogo from "../../../public/zlogo.png"
-import NavMenu from "./_component/NavMenu"
+import NavMenu from "./_component/navMenu/NavMenu"
+import TrendSection from "./_component/trendSection/TrendSection"
+import FollowRecommend from "./_component/followRecommend/FollowRecommend"
 interface IProps {
   children: ReactNode
 }
@@ -44,6 +46,9 @@ function AfterLoginLayout({ children }: IProps) {
             <form className={styles.search}>
               <input type="search" />
             </form>
+
+            <TrendSection />
+            <FollowRecommend />
           </section>
         </div>
       </div>

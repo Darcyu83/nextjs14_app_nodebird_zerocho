@@ -27,7 +27,11 @@ function NavMenu(props: IProps) {
   return (
     <div className={styles.container}>
       {menus.map((menu) => (
-        <Link key={menu.path} href={menu.path}>
+        <Link
+          key={menu.path}
+          href={menu.path}
+          style={{ color: menu.path === segment ? "dodgerblue" : "inherit" }}
+        >
           {menu.title}
         </Link>
       ))}
