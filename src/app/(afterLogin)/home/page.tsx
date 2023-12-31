@@ -1,6 +1,7 @@
 import TabContextProvider from "../../../context/TabContextProvider"
 import PostForm from "../_component/postForm/PostForm"
-import Tabs from "./_component/Tabs"
+import Post from "./_component/posts/Post"
+import Tabs from "./_component/tabs/Tabs"
 import styles from "./home.module.css"
 
 export default function Home() {
@@ -9,6 +10,10 @@ export default function Home() {
       <TabContextProvider>
         <Tabs />
         <PostForm />
+
+        {[...Array(10)].map((_, idx) => (
+          <Post key={idx} />
+        ))}
       </TabContextProvider>
     </main>
   )

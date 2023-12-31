@@ -1,7 +1,7 @@
 "use client"
 import React, { useContext, useState } from "react"
 import styles from "./tabs.module.css"
-import { TabContext } from "../../../../context/TabContextProvider"
+import { TabContext } from "../../../../../context/TabContextProvider"
 
 interface IProps {}
 

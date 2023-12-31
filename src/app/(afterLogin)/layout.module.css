@@ -15,7 +15,7 @@
 .leftSection {
   width: var(--leftSection-w);
   height: 100dvh;
-  background-color: red;
+
   color: black;
 }
 

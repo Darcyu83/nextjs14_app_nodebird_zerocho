@@ -1,0 +1,82 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  border: 1px solid red;
+  padding: 10px;
+  color: black;
+}
+
+.post:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.header {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.header > .avatar {
+  flex-basis: 40px;
+  flex-shrink: 0;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: purple;
+}
+
+.header > .info {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header > .info > .first_line {
+  width: 100%;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.header h3 {
+  font-size: 14px;
+}
+
+.header > .info > .first_line > h3:first-of-type {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.header > .info > .first_line > h3:last-of-type {
+  color: lightgray;
+}
+
+.img_containter {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.img_containter > img {
+  z-index: 0 !important;
+}
+
+.footer {
+}
+
+.red {
+  background: red;
+}
+
+.blue {
+  background: blue;
+}
