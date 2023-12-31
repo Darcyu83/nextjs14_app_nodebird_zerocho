@@ -1,0 +1,65 @@
+.postForm {
+  width: 100%;
+  height: fit-content;
+
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: lightgray;
+
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px;
+}
+
+.avatar {
+  flex-basis: 40px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  /* width: 40px;*/
+  height: 40px;
+  border-radius: 50%;
+  background: gray;
+}
+
+.inputs_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputs_container > textarea {
+  color: black;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 4px;
+  border-color: lightgray;
+  background: white;
+  resize: none;
+  display: block;
+}
+
+.buttons_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.photo_attatchment {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  height: fit-content;
+
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.photo_attatchment:hover {
+  background: lightgreen;
+}

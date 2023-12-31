@@ -2,21 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
+
+  height: calc(100dvh);
 }
 
 .leftSectionWrapper {
   --leftSection-w: 275px;
   width: var(--leftSection-w);
-  height: 150dvh;
   position: relative;
 }
 
 .leftSection {
-  width: 100%;
+  width: var(--leftSection-w);
   height: 100dvh;
+  background-color: red;
   color: black;
-  background: rgba(255, 255, 255, 0.316);
 }
 
 .leftSectionFixed {
@@ -25,12 +25,12 @@
   width: var(--leftSection-w);
   height: 50dvh;
   border: 1px dashed teal;
-  top: 20px;
+  top: 0px;
   padding: 0 8px;
+  margin: 5px 0px;
 }
 
 .rightSectionWrapper {
-  border: 1px solid purple;
   height: 100dvh;
 }
 

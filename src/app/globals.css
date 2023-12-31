@@ -129,6 +129,7 @@ input {
   justify-content: center;
   line-height: 100%;
   cursor: pointer;
+  min-width: fit-content;
 }
 
 .blue_btn:hover {
@@ -152,6 +153,7 @@ input {
   justify-content: center;
   line-height: 100%;
   cursor: pointer;
+  min-width: fit-content;
 }
 
 .white_btn:hover {
