@@ -1,0 +1,12 @@
+.main {
+  position: relative;
+  width: 600px;
+  height: max-content;
+  margin-top: 5px;
+  min-height: calc(100% - 5px);
+  background-color: white;
+  /* padding-top: 70px; */
+
+  display: flex;
+  flex-direction: column;
+}

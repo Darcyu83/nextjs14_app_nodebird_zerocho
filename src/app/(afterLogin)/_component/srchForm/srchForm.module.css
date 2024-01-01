@@ -1,0 +1,45 @@
+.container_no_padding {
+  width: inherit;
+  height: fit-content;
+  position: fixed;
+  top: 0;
+  background: transparent;
+}
+
+.container_has_padding {
+  width: 330px;
+  border-radius: 8px;
+  height: fit-content;
+  position: fixed;
+  top: 5px;
+  padding: 15px;
+  margin: 0 10px;
+  background-color: white;
+}
+
+.search {
+  /* padding: 15px; */
+  /* border: 1px solid lightgray; */
+}
+
+.search > input {
+  height: 40px;
+  padding-left: 50px;
+  font-size: 16px;
+}
+
+.container_no_padding.search > input {
+  margin: 10px;
+  width: calc(100% - 20px);
+  border-radius: 20px;
+}
+
+.search::before {
+  content: "검색";
+  font-size: 14px;
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translate(-0%, calc(-50% + 2px));
+  color: dodgerblue;
+}

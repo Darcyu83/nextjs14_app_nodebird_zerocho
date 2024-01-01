@@ -2,21 +2,23 @@
 import React, { useState } from "react"
 import styles from "./fixedSrchBar.module.css"
 import { usePathname } from "next/navigation"
+import SrchFormFloating from "../srchForm/SrchFormFloating"
 
 interface IProps {}
 
 function FixedSrchBar(props: IProps) {
   const pathname = usePathname()
 
-  const [filter, setFilter] = useState({ allUser: false, meFollowing: false })
+  const [isMeFollowing, setIsMeFollowing] = useState(true)
+  const [isMeFollowing2, setIsMeFollowing2] = useState(true)
 
-  const onChangeAllUserFilter = (bool: boolean) => {
-    setFilter((curr) => ({ ...curr, allUser: bool }))
+  const onChangeUserRangeFilter = (bool: boolean) => {
+    setIsMeFollowing(bool)
+  }
+  const onChangeUserRangeFilter2 = (bool: boolean) => {
+    setIsMeFollowing2(bool)
   }
 
-  const onChangeMeFollowingFilter = (bool: boolean) => {
-    setFilter((curr) => ({ ...curr, meFollowing: bool }))
-  }
   if (pathname === "/search")
     return (
       <div className={[styles.container, styles.filter].join(" ")}>
@@ -31,47 +33,46 @@ function FixedSrchBar(props: IProps) {
           <label htmlFor="allUser">모든 사용자</label>
           <input
             id="allUser"
-            type="checkbox"
-            checked={filter.allUser}
-            onChange={(e) => onChangeAllUserFilter(e.target.checked)}
+            name="isMeFollowing"
+            type="radio"
+            checked={!isMeFollowing}
+            onChange={(e) => onChangeUserRangeFilter(false)}
           />
         </div>
         <div className={styles.checkbox_container}>
           <label htmlFor="meFollowing">내가 팔로우하는 사람들</label>
           <input
             id="meFollowing"
-            type="checkbox"
-            checked={filter.meFollowing}
-            onChange={(e) => onChangeMeFollowingFilter(e.target.checked)}
+            name="isMeFollowing"
+            type="radio"
+            checked={isMeFollowing}
+            onChange={(e) => onChangeUserRangeFilter(true)}
           />
         </div>
         <div className={styles.checkbox_container}>
-          <label htmlFor="allUser">모든 사용자</label>
+          <label htmlFor="allUser2">모든 사용자</label>
           <input
-            id="allUser"
-            type="checkbox"
-            checked={filter.allUser}
-            onChange={(e) => onChangeAllUserFilter(e.target.checked)}
+            id="allUser2"
+            name="isMeFollowing2"
+            type="radio"
+            checked={!isMeFollowing2}
+            onChange={(e) => onChangeUserRangeFilter2(false)}
           />
         </div>
         <div className={styles.checkbox_container}>
-          <label htmlFor="meFollowing">내가 팔로우하는 사람들</label>
+          <label htmlFor="meFollowing2">내가 팔로우하는 사람들</label>
           <input
-            id="meFollowing"
-            type="checkbox"
-            checked={filter.meFollowing}
-            onChange={(e) => onChangeMeFollowingFilter(e.target.checked)}
+            id="meFollowing2"
+            name="isMeFollowing2"
+            type="radio"
+            checked={isMeFollowing2}
+            onChange={(e) => onChangeUserRangeFilter2(true)}
           />
         </div>
       </div>
     )
 
-  return (
-    <form className={[styles.container, styles.search].join(" ")}>
-      {/* 폼 :: 검색 */}
-      <input type="search" />
-    </form>
-  )
+  return <SrchFormFloating />
 }
 
 export default FixedSrchBar
