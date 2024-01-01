@@ -11,11 +11,11 @@ import styles from "./navMenu.module.css"
 interface IProps {}
 
 const menus = [
-  { title: "홈", path: "home" },
-  { title: "탐색", path: "explore" },
-  { title: "게시글 작성", path: "compose" },
-  { title: "메시지", path: "messages" },
-  { title: "검색", path: "search" },
+  { title: "홈", path: "/home" },
+  { title: "탐색", path: "/explore" },
+  { title: "게시글 작성", path: "/compose" },
+  { title: "메시지", path: "/messages" },
+  { title: "검색", path: "/search" },
 ]
 
 function NavMenu(props: IProps) {

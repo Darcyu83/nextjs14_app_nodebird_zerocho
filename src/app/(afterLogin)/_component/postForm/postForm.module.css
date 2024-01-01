@@ -6,9 +6,9 @@
   border-style: solid;
   border-color: lightgray;
 
-  margin-top: 90px;
   display: flex;
-  align-items: center;
+
+  align-items: flex-start;
   gap: 8px;
 
   padding: 12px;

@@ -1,17 +1,19 @@
 import React, { ReactNode } from "react"
 import styles from "./layout.module.css"
-import Link from "next/link"
+
 import Image from "next/image"
 
 import zLogo from "../../../public/zlogo.png"
 import NavMenu from "./_component/navMenu/NavMenu"
 import TrendSection from "./_component/trendSection/TrendSection"
 import FollowRecommend from "./_component/followRecommend/FollowRecommend"
+import Link from "next/link"
 interface IProps {
   children: ReactNode
+  modal: ReactNode
 }
 
-function AfterLoginLayout({ children }: IProps) {
+function AfterLoginLayout({ children, modal }: IProps) {
   return (
     <div className={styles.container}>
       <header className={styles.leftSectionWrapper}>
@@ -30,6 +32,9 @@ function AfterLoginLayout({ children }: IProps) {
               <ul>
                 <NavMenu />
               </ul>
+              <Link href={"/compose/tweet"} className="blue_btn">
+                게시하기
+              </Link>
             </nav>
           </div>
         </section>
@@ -52,6 +57,7 @@ function AfterLoginLayout({ children }: IProps) {
           </section>
         </div>
       </div>
+      {modal}
     </div>
   )
 }

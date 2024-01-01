@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  padding-top: 5px;
+  color: slategray;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat_active {
+  color: dodgerblue;
+}
+
+.repost_active {
+  color: limegreen;
+}
+
+.like_active {
+  color: hotpink;
+}

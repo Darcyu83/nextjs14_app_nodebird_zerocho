@@ -9,9 +9,12 @@ import React, {
 } from "react"
 import styles from "./postForm.module.css"
 import Image from "next/image"
-interface IProps {}
+import Avatar from "../../../../component/avatar/Avatar"
+interface IProps {
+  isModalUsage?: boolean
+}
 
-function PostForm(props: IProps) {
+function PostForm({ isModalUsage }: IProps) {
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const [content, setContent] = useState("")
@@ -26,16 +29,25 @@ function PostForm(props: IProps) {
   const onClickPhotoIcon = () => {
     fileInputRef.current?.click()
   }
+
   return (
-    <form className={styles.postForm} onSubmit={onSubmit}>
-      <div className={styles.avatar}></div>
+    <form
+      className={styles.postForm}
+      style={{
+        marginTop: isModalUsage ? undefined : 90,
+
+        borderWidth: isModalUsage ? "0" : "inherit",
+      }}
+      onSubmit={onSubmit}
+    >
+      <Avatar />
 
       <div className={styles.inputs_container}>
         <textarea
           value={content}
           onChange={onChangeContent}
           placeholder="무슨일이 일어나고 있나요?"
-          rows={5}
+          rows={isModalUsage ? 10 : 5}
         />
         <div className={styles.buttons_container}>
           <input ref={fileInputRef} type="file" multiple hidden />

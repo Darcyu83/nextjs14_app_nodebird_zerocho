@@ -1,0 +1,46 @@
+.container {
+  min-width: 500px;
+  width: calc(100dvw / 2);
+  min-height: 200px;
+  height: fit-content;
+
+  background: white;
+  z-index: 2;
+  color: black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header > p {
+  font-size: 12px;
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.body {
+  display: flex;
+  gap: 8px;
+}
+
+.input_content {
+  width: 100%;
+  background: white;
+  resize: none;
+  border-color: lightgray;
+  border-radius: 8px;
+}
+
+.footer {
+  width: 100%;
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+}
