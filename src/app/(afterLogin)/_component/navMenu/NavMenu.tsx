@@ -22,8 +22,8 @@ function NavMenu(props: IProps) {
   const segment = useSelectedLayoutSegment()
   const segments = useSelectedLayoutSegments()
 
-  console.log("nav menu ==== ", segment)
-  console.log("nav menu ==== ", segments)
+  // console.log("nav menu ==== ", segment)
+  // console.log("nav menu ==== ", segments)
   return (
     <div className={styles.container}>
       {menus.map((menu) => (

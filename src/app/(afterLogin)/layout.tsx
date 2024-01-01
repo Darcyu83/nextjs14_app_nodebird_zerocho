@@ -8,6 +8,7 @@ import NavMenu from "./_component/navMenu/NavMenu"
 import TrendSection from "./_component/trendSection/TrendSection"
 import FollowRecommend from "./_component/followRecommend/FollowRecommend"
 import Link from "next/link"
+import FixedSrchBar from "./_component/fixedSrchBar/FixedSrchBar"
 interface IProps {
   children: ReactNode
   modal: ReactNode
@@ -46,11 +47,7 @@ function AfterLoginLayout({ children, modal }: IProps) {
           <main className={styles.main}>{children}</main>
           {/* 우측 aside */}
           <section className={styles.rightSection}>
-            {/* 폼 :: 검색 */}
-
-            <form className={styles.search}>
-              <input type="search" />
-            </form>
+            <FixedSrchBar />
 
             <TrendSection />
             <FollowRecommend />

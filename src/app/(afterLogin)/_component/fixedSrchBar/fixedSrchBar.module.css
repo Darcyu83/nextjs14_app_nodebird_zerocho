@@ -1,0 +1,51 @@
+.container {
+  padding: 15px;
+  border-radius: 15px;
+  margin: 5px 10px;
+  background: white;
+  width: 330px;
+  height: fit-content;
+}
+
+.search {
+  position: fixed;
+  top: 0;
+  border: 1px solid lightgray;
+}
+
+.search > input {
+  height: 40px;
+  padding-left: 50px;
+  font-size: 16px;
+}
+
+.search::before {
+  content: "검색";
+  font-size: 14px;
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translate(-0%, calc(-50% + 2px));
+  color: dodgerblue;
+}
+
+.filter {
+  color: black;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox_container label {
+  flex: 1;
+}
+
+.checkbox_container input[type="checkbox"] {
+  width: auto;
+}
