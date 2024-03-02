@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.container:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.userId {
+  font-size: 12px;
+  color: darkgray;
+}
+
+.container:hover .userId {
+  color: white;
+}

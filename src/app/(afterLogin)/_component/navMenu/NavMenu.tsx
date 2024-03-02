@@ -4,10 +4,10 @@ import {
   useSelectedLayoutSegment,
   useSelectedLayoutSegments,
 } from "next/navigation"
-import React, { useMemo } from "react"
+import { useMemo } from "react"
 
-import styles from "./navMenu.module.css"
 import { dummy_user } from "../../../../dummy/dummyData"
+import styles from "./navMenu.module.css"
 
 interface IProps {}
 
@@ -30,27 +30,35 @@ function NavMenu(props: IProps) {
         path: `/${dummy_user.id}/status/1`,
       },
     }
+    console.log("nav menu ==== 1", segment, mutated)
 
-    const mapItems = Object.keys(mutated).map((key) => {
-      return mutated[key as keyof typeof menus]
-    })
-
-    return mapItems
+    return mutated
   }, [])
 
-  // console.log("nav menu ==== ", segment)
   // console.log("nav menu ==== ", segments)
   return (
     <div className={styles.container}>
-      {menuItms.map((menu) => (
-        <Link
-          key={menu.path}
-          href={menu.path}
-          style={{ color: menu.path === segment ? "dodgerblue" : "inherit" }}
-        >
-          {menu.title}
-        </Link>
-      ))}
+      {Object.keys(menuItms).map((key) => {
+        const menu = menuItms[key as keyof typeof menuItms]
+        return (
+          <Link
+            key={menu.path}
+            href={menu.path}
+            className={styles.nav_btn}
+            style={
+              menu.path === `/${segment}`
+                ? {
+                    fontWeight: "bold",
+                    color: "dodgerblue",
+                    textDecoration: "underline",
+                  }
+                : {}
+            }
+          >
+            {menu.title}
+          </Link>
+        )
+      })}
     </div>
   )
 }

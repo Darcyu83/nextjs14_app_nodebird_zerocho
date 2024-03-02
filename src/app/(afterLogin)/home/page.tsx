@@ -8,9 +8,13 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <TabContextProvider>
+        {/* 추천 / 팔로윙 불투명 fixed 헤더 */}
         <Tabs />
+
+        {/* post resgist form  */}
         <PostForm />
 
+        {/* posts */}
         {[...Array(10)].map((_, idx) => (
           <Post key={idx} />
         ))}

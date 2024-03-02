@@ -2,4 +2,19 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 4px;
+  gap: 4px;
+}
+
+.nav_btn {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  padding: 4px 8px;
+}
+
+.nav_btn:hover {
+  border-radius: 16px;
+  background: lightgray;
 }

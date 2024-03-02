@@ -5,6 +5,7 @@
 
   height: calc(100dvh);
   position: relative;
+  color: black;
 }
 
 .leftSectionWrapper {
@@ -16,19 +17,21 @@
 .leftSection {
   width: var(--leftSection-w);
   height: 100dvh;
-
-  color: black;
 }
 
 .leftSectionFixed {
+  --padding-v: 8px;
   background: white;
   position: fixed;
   width: var(--leftSection-w);
-  height: 50dvh;
+  height: calc(100dvh - var(--padding-v));
   border: 1px dashed teal;
   top: 0px;
-  padding: 0 8px;
+  padding: 0 var(--padding-v) var(--padding-v);
   margin: 5px 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 64px 1fr 64px;
 }
 
 .rightSectionWrapper {

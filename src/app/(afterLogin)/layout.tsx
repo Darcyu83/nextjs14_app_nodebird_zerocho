@@ -1,14 +1,15 @@
-import React, { ReactNode } from "react"
+import { ReactNode } from "react"
 import styles from "./layout.module.css"
 
 import Image from "next/image"
 
+import Link from "next/link"
 import zLogo from "../../../public/zlogo.png"
+import MyInfoCard from "../../component/card/myInfoCard/MyInfoCard"
+import FixedSrchBar from "./_component/fixedSrchBar/FixedSrchBar"
+import FollowRecommend from "./_component/followRecommend/FollowRecommend"
 import NavMenu from "./_component/navMenu/NavMenu"
 import TrendSection from "./_component/trendSection/TrendSection"
-import FollowRecommend from "./_component/followRecommend/FollowRecommend"
-import Link from "next/link"
-import FixedSrchBar from "./_component/fixedSrchBar/FixedSrchBar"
 interface IProps {
   children: ReactNode
   modal: ReactNode
@@ -37,6 +38,8 @@ function AfterLoginLayout({ children, modal }: IProps) {
                 게시하기
               </Link>
             </nav>
+
+            <MyInfoCard />
           </div>
         </section>
       </header>
