@@ -1,5 +1,5 @@
 "use client"
-import React, { ReactNode, createContext, useContext, useState } from "react"
+import { ReactNode, createContext, useState } from "react"
 
 interface IProps {
   children: ReactNode
@@ -9,7 +9,10 @@ interface ITabContextProps {
   tab: "rec" | "fol"
   onChangeTab: (tabNm: "rec" | "fol") => void
 }
-export const TabContext = createContext<ITabContextProps | null>(null)
+export const TabContext = createContext<ITabContextProps | null>({
+  tab: "rec",
+  onChangeTab: (tabNm: "rec" | "fol") => {},
+})
 
 function TabContextProvider({ children }: IProps) {
   const [tab, setTab] = useState<"rec" | "fol">("rec")

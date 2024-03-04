@@ -1,8 +1,7 @@
 "use client"
-import React from "react"
+import { usePathname } from "next/navigation"
 import TrendCard from "./TrendCard"
 import styles from "./trendSection.module.css"
-import { usePathname } from "next/navigation"
 interface IProps {}
 
 function TrendSection(props: IProps) {
@@ -20,7 +19,7 @@ function TrendSection(props: IProps) {
           <h3>나를 위한 트렌드</h3>
 
           {[...Array(5)].map((_, idx) => (
-            <TrendCard key={idx} />
+            <TrendCard key={idx} index={idx} />
           ))}
         </>
       )}

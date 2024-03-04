@@ -16,7 +16,7 @@ export default function Home() {
 
         {/* posts */}
         {[...Array(10)].map((_, idx) => (
-          <Post key={idx} />
+          <Post key={idx} index={idx} />
         ))}
       </TabContextProvider>
     </main>

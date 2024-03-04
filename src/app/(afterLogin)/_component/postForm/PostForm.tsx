@@ -1,15 +1,9 @@
 "use client"
 
-import React, {
-  ChangeEventHandler,
-  EventHandler,
-  FormEventHandler,
-  useRef,
-  useState,
-} from "react"
-import styles from "./postForm.module.css"
 import Image from "next/image"
+import { ChangeEventHandler, FormEventHandler, useRef, useState } from "react"
 import Avatar from "../../../../component/avatar/Avatar"
+import styles from "./postForm.module.css"
 interface IProps {
   isModalUsage?: boolean
 }
@@ -40,7 +34,7 @@ function PostForm({ isModalUsage }: IProps) {
       }}
       onSubmit={onSubmit}
     >
-      <Avatar />
+      <Avatar imgUrl={"/images/cat_0.png"} />
 
       <div className={styles.inputs_container}>
         <textarea

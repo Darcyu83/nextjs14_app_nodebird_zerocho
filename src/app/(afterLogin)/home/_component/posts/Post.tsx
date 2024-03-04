@@ -1,20 +1,23 @@
-import React, { useState } from "react"
-import styles from "./post.module.css"
-import Image from "next/image"
 import dayjs from "dayjs"
-import relativeTime from "dayjs/plugin/relativeTime"
 import ko from "dayjs/locale/ko"
+import relativeTime from "dayjs/plugin/relativeTime"
+import Image from "next/image"
+import Avatar from "../../../../../component/avatar/Avatar"
 import PostActionButtons from "./PostActionButtons"
+import styles from "./post.module.css"
 dayjs.extend(relativeTime)
 dayjs.locale(ko)
 
-interface IProps {}
+interface IProps {
+  index: number
+}
 
-function Post(props: IProps) {
+function Post({ index }: IProps) {
   return (
     <article className={styles.post}>
       <div className={styles.header}>
-        <div className={styles.avatar}></div>
+        <Avatar imgUrl={`/images/cat_${(index + 1) % 4}.png`} />
+        {/* <div className={styles.avatar}></div> */}
         <div className={styles.info}>
           <div className={styles.first_line}>
             <h3>리트윗 타겟 @ 리트윗한 사람</h3>
@@ -26,7 +29,7 @@ function Post(props: IProps) {
       </div>
       <div className={styles.img_containter}>
         <Image
-          src={"/yRsRRjGO.jpg"}
+          src={`/images/cat_${index % 4}.png`}
           alt="게시글 사진"
           fill
           //   layout="fill"
