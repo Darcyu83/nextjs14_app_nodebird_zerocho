@@ -11,7 +11,7 @@ export default function Home() {
         {/* 추천 / 팔로윙 불투명 fixed 헤더 */}
         <Tabs />
 
-        {/* post resgist form  */}
+        {/* post register form  */}
         <PostForm />
 
         {/* posts */}

@@ -1,3 +1,7 @@
 {
-  "recommendations": ["martinjohns.inline-types"]
+  "recommendations": [
+    "martinjohns.inline-types",
+    "oderwat.indent-rainbow",
+    "streetsidesoftware.code-spell-checker"
+  ]
 }

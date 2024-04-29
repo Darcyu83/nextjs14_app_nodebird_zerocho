@@ -1,0 +1,39 @@
+.top_fixed {
+  width: 600px;
+  position: fixed;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(12px);
+}
+
+.top_fixed > h2 {
+  font-weight: bold;
+}
+
+.tabs {
+  margin: 4px 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.tab {
+  padding: 8px 0px;
+  flex: 1;
+  display: grid;
+  place-items: center;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background: rgb(223, 247, 254);
+}
+
+.tab_indicator {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid dodgerblue;
+}

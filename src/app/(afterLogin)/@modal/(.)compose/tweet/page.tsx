@@ -14,6 +14,7 @@ function TweetModal(props: IProps) {
   const onClose = () => {
     router.back()
   }
+
   return (
     <ModalBg>
       <div className={styles.container}>

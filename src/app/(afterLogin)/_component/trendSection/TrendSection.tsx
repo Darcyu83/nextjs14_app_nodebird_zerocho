@@ -7,6 +7,7 @@ interface IProps {}
 function TrendSection(props: IProps) {
   const path = usePathname()
 
+  if (path === "/explore") return null
   // console.log("usePathname", path)
 
   return (

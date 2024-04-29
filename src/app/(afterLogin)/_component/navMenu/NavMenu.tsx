@@ -15,6 +15,7 @@ const menus = {
   home: { title: "홈", path: "/home" },
   explore: { title: "탐색하기", path: "/explore" },
   messages: { title: "쪽지", path: "/messages" },
+  // search: { title: "검색", path: "/search" },
   profile: { title: "프로필", path: "/profile" },
 }
 
@@ -30,7 +31,6 @@ function NavMenu(props: IProps) {
         path: `/${dummy_user.id}/status/1`,
       },
     }
-    console.log("nav menu ==== 1", segment, mutated)
 
     return mutated
   }, [])
